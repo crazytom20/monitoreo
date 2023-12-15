@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [ 
+    {
+      "type": "Feature",
+      "properties": {
+        "Distrito": "Alto Nanay",
+        "Comunidad": "Comunidad Miraflores",
+        "Delito": "Tocamientos Indebidos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.70296452, -3.77828927]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Distrito": "Alto Nanay",
+        "Comunidad": "Comunidad Monte Calvario",
+        "Delito": "Tocamientos Indebidos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.71255114, -3.75895715]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "FeatureCollection",
+  "name": "homicidiodos",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+  { "type": "Feature", "properties": { "Distrito": "Alto Nanay", "Comunidad": "Comunidad Puca Urco", "Delito": "Homicidio", "Fecha": "01/10/2023", "Descripcion": "El último 1 de octubre, el cuerpo de Dilber Gonzales Yumbato, de 18 años, fue hallado en el río Nanay, aguas arriba de la comunidad campesina de Puca Urco, distrito de Alto Nanay, en Loreto." }, "geometry": { "type": "Point", "coordinates": [ -74.116396, -3.7604 ] } }
+  ]
+  }

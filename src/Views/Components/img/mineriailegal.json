@@ -1,0 +1,161 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Puca Urco",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.116396, -3.7604]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Diamante Azul",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.77961076473625, -3.9008334000577225]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "San Juan de Ungurahual",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.81006139000, -3.90171690000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "San Antonio de Pintuyacu",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [-73.77892269185159, -3.7045602101940185]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Alvarenga",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.38705064000, -3.58872765]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Salvador de Pava",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [ -73.99273, -3.831641]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Nuevo Loreto",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.73359540000, -3.89818603000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Pisco",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.71441052000, -3.88936428000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Santa Maria",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.696694, -3.888494]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "San Antonio Rio Pintuyacu",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.78142555730615,-3.685000756463176]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Monte Calvario",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.71255114000, -3.75895715000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Miraflores, Rio Pintuyacu",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.70296452000, -3.77828927000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Nombre": "Nueva Esperanza, Rio Pintuyacu",
+        "Tipo": "Minería Ilegal",
+        "Símbolo": "De rojo cuadrado"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.64670814000, -3.82530640000]
+      }
+    }
+  ]
+}
