@@ -4,7 +4,7 @@ import ReactLeafletGoogleLayer from 'react-leaflet-google-layer';
 import 'leaflet/dist/leaflet.css';
 import 'flowbite/dist/flowbite.css';
 import { Spinner } from 'react-bootstrap';
-
+import Header from './Components/Header';
 const center = {
   lat: -3.7491200,
   lng: -73.2538300,
@@ -250,7 +250,7 @@ useEffect(() => {
   
   
   return (
-    <>
+    <> <Header />
       <MapContainer center={center} zoom={13} style={{ height: '100vh' }}>
         <LayersControl position="topright">
           {Object.keys(mapStyles).map(style => (

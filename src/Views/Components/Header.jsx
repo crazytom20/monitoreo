@@ -27,10 +27,10 @@ const Header = () => {
                 <Nav className="ml-auto" style={{ paddingRight: '15px', marginLeft: 'auto' }}>
 
                     {/* Menú Concurso */}
-                    <NavDropdown title={<span style={{ color: 'green' }}>ELEGIR FECHAS</span>} id="concurso-dropdown">                        
+                    <NavDropdown title={<span style={{ color: 'green' }}>DISTRITOS UNIDOS</span>} id="concurso-dropdown">                        
                         
-                        <NavDropdown.Item onClick={() => navigate("/fecha3")} style={{ color: 'green' }}>2023-11-14</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => navigate("/fecha4")} style={{ color: 'green' }}>2023-11-16</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => navigate("/fecha3")} style={{ color: 'green' }}>DISTRITOS MONITOREO</NavDropdown.Item>
+{/*                         <NavDropdown.Item onClick={() => navigate("/fecha4")} style={{ color: 'green' }}>2023-11-16</NavDropdown.Item>
                         <NavDropdown.Item onClick={() => navigate("/fecha5")} style={{ color: 'green' }}>2023-11-17</NavDropdown.Item>
                         <NavDropdown.Item onClick={() => navigate("/fecha6")} style={{ color: 'green' }}>2023-11-18</NavDropdown.Item>
                         <NavDropdown.Item onClick={() => navigate("/fecha2")}style={{ color: 'green' }}>2023-11-19</NavDropdown.Item>
@@ -38,7 +38,7 @@ const Header = () => {
                         <NavDropdown.Item onClick={() => navigate("/fecha8")}style={{ color: 'green' }}>2023-11-23</NavDropdown.Item>
                         <NavDropdown.Item onClick={() => navigate("/fecha9")}style={{ color: 'green' }}>2023-11-25</NavDropdown.Item>
                         <NavDropdown.Item onClick={() => navigate("/fecha10")}style={{ color: 'green' }}>2023-11-28</NavDropdown.Item>
-                        <NavDropdown.Item onClick={() => navigate("/fecha11")}style={{ color: 'green' }}>2023-12-01</NavDropdown.Item>
+                        <NavDropdown.Item onClick={() => navigate("/fecha11")}style={{ color: 'green' }}>2023-12-01</NavDropdown.Item> */}
                 
                     </NavDropdown>
 
