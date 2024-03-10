@@ -17709,7 +17709,7 @@ const Legend = () => {
           </CircleMarker>
         ))}
 
-         <Legend />
+        
       </MapContainer>
     </>
   );

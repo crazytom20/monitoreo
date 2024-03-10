@@ -60,7 +60,7 @@ const parameterColorG = {
 };
 
 const Monitoreo = () => {
-  const googleApiKey = "AIzaSyA68xOsLic_QKxD4EcnwZDrtv-iE09-95M";
+  const googleApiKey = "AIzaSyCBkSTyfrkxXe5LiYLZZTRtKvQqSHt289Y";
   const mapStyles = {
     Aubergine: require("./Stylemaps/aubergine-map-style.json"),
     Dark: require("./Stylemaps/dark-map-style.json"),
@@ -104,7 +104,7 @@ const Monitoreo = () => {
   useEffect(() => {
     const fetchParameterData = async () => {
       try {
-        const response = await fetch('http://108.181.166.127/identiarbol/identiarbolbackend/public/api/optionsparmon');
+        const response = await fetch('https://identiarbol.org/identiarbolbackend/public/api/optionsparmon');
         const data = await response.json();
         setParameters(data.parameters);
       } catch (error) {
@@ -149,7 +149,7 @@ useEffect(() => {
     const fetchNodesData = async () => {
       try {
         const response = await fetch(
-          'http://108.181.166.127/identiarbol/identiarbolbackend/public/api/nodosmon'
+          'https://identiarbol.org/identiarbolbackend/public/api/nodosmon'
         );
         const data = await response.json();
         setApiData(data.node);
@@ -166,7 +166,7 @@ useEffect(() => {
       try {
         if (selectedNode) {
           const response = await fetch(
-            `http://108.181.166.127/identiarbol/identiarbolbackend/public/api/optionsmon/${selectedNode}`
+            `https://identiarbol.org/identiarbolbackend/public/api/optionsmon/${selectedNode}`
           );
           const data = await response.json();
           setOptionsData(data.dates);
@@ -185,7 +185,7 @@ useEffect(() => {
       try {
         if (selectedDate) {
           const response = await fetch(
-            `http://108.181.166.127/identiarbol/identiarbolbackend/public/api/hoursmon/${selectedDate}/${selectedNode}`
+            `https://identiarbol.org/identiarbolbackend/public/api/hoursmon/${selectedDate}/${selectedNode}`
           );
           const data = await response.json();
           setHoursData(data.hours);
@@ -204,7 +204,7 @@ useEffect(() => {
       try {
         if (selectedHour) {
           const response = await fetch(
-            `http://108.181.166.127/identiarbol/identiarbolbackend/public/api/minutesmon/${selectedDate}/${selectedHour}/${selectedNode}`
+            `https://identiarbol.org/identiarbolbackend/public/api/minutesmon/${selectedDate}/${selectedHour}/${selectedNode}`
           );
           const data = await response.json();
           setMinutesData(data.minutes);
@@ -228,7 +228,7 @@ useEffect(() => {
         if (selectedDate !== "Días" && selectedNode) {
           // Update the API endpoint to fetch data for the selected node
           const response = await fetch(
-            `http://108.181.166.127/identiarbol/identiarbolbackend/public/api/ownermon?dates=${selectedDate}&hours=${selectedHour}&minutes=${selectedMinutes}&parameter=${selectedParameter}&node=${selectedNode}`
+            `https://identiarbol.org/identiarbolbackend/public/api/ownermon?dates=${selectedDate}&hours=${selectedHour}&minutes=${selectedMinutes}&parameter=${selectedParameter}&node=${selectedNode}`
           );
           const data = await response.json();
           

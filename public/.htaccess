@@ -4,4 +4,4 @@ RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule . /visorcuenca/index.html [L]
+RewriteRule . /monitoreo/index.html [L]
