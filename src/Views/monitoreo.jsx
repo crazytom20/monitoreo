@@ -5,6 +5,8 @@ import 'leaflet/dist/leaflet.css';
 import 'flowbite/dist/flowbite.css';
 import { Spinner } from 'react-bootstrap';
 import Header from './Components/Header';
+import './Components/css/legend.css'
+
 const center = {
   lat: -3.7491200,
   lng: -73.2538300,
@@ -42,11 +44,11 @@ const parameterPalettes = {
     { range: [2000, 5000], color: 'purple' },
   ],
   5: [
-    { range: [0, 2], color: 'blue' },
-    { range: [3, 5], color: 'green' },
-    { range: [6, 7], color: 'yellow' },
-    { range: [8, 10], color: 'orange' },
-    { range: [11, 50], color: 'purple' },
+    { range: [0, 2.99], color: 'lime' },
+    { range: [3, 5.99], color: 'yellow' },
+    { range: [6, 7.99], color: 'orange' },
+    { range: [8, 10.99], color: 'red' },
+    { range: [11, 50.99], color: 'purple' },
   ]
   // Add more palettes for additional parameters
 };
@@ -97,6 +99,64 @@ const Monitoreo = () => {
   
 
 
+// Define los colores y rangos de temperatura para la leyenda
+const legendData = {
+ 
+  1: [
+    { label: 'LEYENDA' },
+    { color: 'lightblue', label: '0-30 %' },
+    { color: 'green', label: '31-60 %' },
+    { color: 'yellow', label: '61-80 %' },
+    { color: 'orange', label: '81-90 %' },
+    { color: 'red', label: '91-100 %' },
+  ],
+  2: [
+    { label: 'LEYENDA' },
+    { color: 'blue', label: '20-29.9 °C' },
+    { color: 'yellow', label: '30-33.9 °C' },
+    { color: 'lime', label: '34-37.9 °C' },
+    { color: 'pink', label: '38-39.9 °C' },
+    { color: 'red', label: '40-100 °C' },
+  ],
+  3: [
+    { label: 'LEYENDA' },
+    { color: 'blue', label: '0-200 ppm' },
+    { color: 'yellow', label: '200-500 ppm' },
+    { color: 'lime', label: '500-1000 ppm' },
+    { color: 'pink', label: '1000-2000 ppm' },
+    { color: 'red', label: '2000-5000 ppm' },
+  ],
+  4: [
+    { label: 'LEYENDA' },
+    { color: 'blue', label: '0-200 ppm' },
+    { color: 'yellow', label: '200-500 ppm' },
+    { color: 'lime', label: '500-1000 ppm' },
+    { color: 'pink', label: '1000-2000 ppm' },
+    { color: 'red', label: '2000-5000 ppm' },
+  ],
+  5: [
+    { label: 'LEYENDA' },
+    { color: 'lime', label: '0 - 2' },
+    { color: 'yellow', label: '3 - 5' },
+    { color: 'orange', label: '6 - 7' },
+    { color: 'red', label: '8 - 10' },
+    { color: 'purple', label: '11 - 50' },
+  ],
+  // Add legend data for other parameters
+};
+
+  // Función para renderizar la leyenda
+  // Función para renderizar la leyenda
+  const renderLegend = () => (
+    <div className="legend">
+      {legendData[selectedParameter] && legendData[selectedParameter].map((item, index) => (
+        <div key={index} className="legend-item">
+          <div className="legend-color" style={{ backgroundColor: item.color }} />
+          <div className="legend-label">{item.label}</div>
+        </div>
+      ))}
+    </div>
+  );
 
 
   //ESTO ES PARA LOS PARAMETROS
@@ -114,6 +174,8 @@ const Monitoreo = () => {
   
     fetchParameterData();
   }, []);
+
+
 
   
 //ESTO ES PARA SELECCIONAR LOS DIAS, HORAS, MINUTOS
@@ -251,6 +313,7 @@ useEffect(() => {
   
   return (
     <> <Header />
+   
       <MapContainer center={center} zoom={13} style={{ height: '100vh' }}>
         <LayersControl position="topright">
           {Object.keys(mapStyles).map(style => (
@@ -263,8 +326,26 @@ useEffect(() => {
             </LayersControl.BaseLayer>
           ))}
         </LayersControl>
+       
+     
+  
 
         <div style={{ position: 'absolute', top: 10, left: 500, zIndex: 1000 }}>
+
+        <select onChange={(e) => setSelectedParameter(e.target.value)}>
+            <option value="">Parámetro</option>
+               {parameters.map(parameter => (
+             <option
+              key={parameter.par_int_id}
+              value={parameter.par_int_id}
+             // style={{ backgroundColor: parameterColors[parameter.par_int_id] || 'white' }}
+            >
+              {parameter.par_txt_name}
+            </option>
+  ))}
+</select>
+
+
           <select
             value={selectedNode}
             onChange={(e) => setSelectedNode(e.target.value)}
@@ -309,18 +390,7 @@ useEffect(() => {
           </select>
 
           
-<select onChange={(e) => setSelectedParameter(e.target.value)}>
-            <option value="">Parámetro</option>
-               {parameters.map(parameter => (
-             <option
-              key={parameter.par_int_id}
-              value={parameter.par_int_id}
-             // style={{ backgroundColor: parameterColors[parameter.par_int_id] || 'white' }}
-            >
-              {parameter.par_txt_name}
-            </option>
-  ))}
-</select>
+
         </div>
 
         {loading && (
@@ -448,9 +518,10 @@ useEffect(() => {
 }
         
     
-    
+{renderLegend()}
 
       </MapContainer>
+    
     </>
   );
 };
